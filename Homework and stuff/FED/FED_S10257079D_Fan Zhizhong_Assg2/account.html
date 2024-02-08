@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Typer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .orion-typer {
+            color: white;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo2">
+                <a href="index.html">
+                    <i class="fa fa-keyboard-o"></i>
+                </a>
+            </div>
+            <p class="orion-typer">Orion Typer</p>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="account-page">
+        <div class="container2">
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <form id="add-contact-form">
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa fa-user"></i>
+                            <input type="text" placeholder="Name" id="player-username">
+                        </div>
+                        <div class="space"></div>
+                        <div class="input-field">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" placeholder="Email" id="player-email">
+                        </div>
+                        <div class="space"></div>
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" placeholder="Password" id="player-password">
+                        </div>
+                        <div class="space"></div>
+                        <p>
+                            Lost password <a href="#">Click Here!</a>
+                        </p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupBtn">Sign up</button>
+                        <button type="button" class="disable" id="signinBtn">Sign in</button>
+                    </div>
+                    <div class="space"></div>
+                    <div class="btn-field btn-field-submit">
+                        <button type="submit" id="contact-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function () {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function () {
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+    </script>
+</body>
+
+</html>
