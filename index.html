@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orion Typer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .lottie-animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .orion-typer {
+      color: white;
+      align-items: center;
+      justify-content: center;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="navbar">
+      <div class="logo2">
+        <a href="index.html">
+          <i class="fa fa-keyboard-o"></i>
+        </a>
+      </div>
+      <p class="orion-typer">Orion Typer</p>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="leaderboard.html">Leaderboard</a>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--front page contents-->
+  <div class="index-page">
+    <div class="container">
+      <div class="wrapper">
+        <div class="lottie-animation">
+          <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+  
+          <dotlottie-player src="https://lottie.host/aee38609-132d-49d1-87f7-5b8503338285/qJBrW7JwSl.json"
+            background="transparent" speed="2" style="width: 200px; height: 200px;" loop autoplay></dotlottie-player>
+        </div>
+        <input type="text" class="input-field">
+        <div class="content-box">
+          <div class="typing-text">
+            <p></p>
+          </div>
+          <div class="content">
+            <ul class="result-details">
+              <li class="time">
+                <p>Time Left:</p>
+                <span><b>60</b>s</span>
+              </li>
+              <li class="mistake">
+                <p>Mistakes:</p>
+                <span>0</span>
+              </li>
+              <li class="wpm">
+                <p>WPM:</p>
+                <span>0</span>
+              </li>
+              <li class="cpm">
+                <p>CPM:</p>
+                <span>0</span>
+              </li>
+            </ul>
+            <button>Try Again</button>
+          </div>
+        </div>
+      </div>
+      <script src="js/paragraphs.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </div>
+</body>

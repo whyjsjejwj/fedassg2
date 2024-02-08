@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .header {
+            background: rgb(36, 36, 36);
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            /* Align items vertically */
+        }
+
+        .container h1 img {
+            margin-right: 10px;
+            /* Adjust spacing between image and text */
+        }
+
+        #leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #leaderboard-table th,
+        #leaderboard-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #leaderboard-table th {
+            background-color: #f2f2f2;
+        }
+
+        #leaderboard-body tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #leaderboard-body tr:hover {
+            background-color: #ddd;
+        }
+
+        .lottie-animation {
+            margin-left: 20px;
+        }
+
+        .lottie-animation lottie-player {
+            width: 100px;
+            height: 100px;
+            padding-bottom: 20px;
+        }
+
+        .orion-typer {
+            color: white;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .logo3 {
+            font-size: 25px;
+            padding-left: 20px;
+            width: 275px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo3">
+                <a href="index.html">
+                    <i class="fa fa-keyboard-o"></i>
+                </a>
+            </div>
+            <p class="orion-typer">Orion Typer</p>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="leaderboard-page">
+        <div class="container">
+            <h1>
+                Leaderboard
+                <div class="lottie-animation">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/7c372ff1-fda5-46c0-930d-0660a839ff3a/YESjrzLPHE.json"
+                        background="transparent" speed="1.5" loop autoplay></lottie-player>
+                </div>
+            </h1>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+
+</html>
